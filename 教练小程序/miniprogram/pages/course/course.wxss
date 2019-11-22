@@ -1,0 +1,82 @@
+/* 选中的课 */
+.select_Lesson {
+  color:#523317;
+  background-color: #DAA97E;
+  border-radius: 26rpx;
+}
+
+/* 整体课程 */
+.whole_class {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+ flex-direction:column;
+  padding:40rpx 40rpx 40rpx;
+}
+/* 单节课程 */
+.class_descript {
+  display: flex;
+  flex-direction: row;
+  padding:20rpx 20rpx 20rpx;
+  background-color: #523317;
+  margin-top:20rpx;
+  margin-bottom: 20rpx; 
+  align-items: center;
+}
+/* 课程描述 */
+.class_info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 36rpx;
+  color:#DAA97E;
+  margin-right: 36rpx;
+}
+.class_name {
+  font-size: 28rpx; 
+}
+.class_type {
+  display: flex;
+  font-size:20rpx;
+  margin-top:8rpx;
+  margin-bottom: 20rpx; 
+  vertical-align:middle;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.descript {
+   vertical-align:middle;
+   line-height: 36rpx;
+}
+.over {
+    margin:auto auto;
+    border: 2rpx solid #000000;
+    color:#000000;
+    padding:4rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+.yuyue {
+    margin:auto auto;
+    border: 2rpx solid #DAA97E;
+    color:#DAA97E;
+    padding:4rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+.jieshu {
+     margin:auto auto;
+    border: 2rpx solid #d9534f;
+    color:#d9534f;
+    padding:4rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+.class_shopName{
+  font-size: 28rpx;
+}
+.name_shopname{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

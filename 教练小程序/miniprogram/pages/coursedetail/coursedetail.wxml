@@ -1,0 +1,32 @@
+<view class="class_descript"  wx:for="{{course_detail}}">
+
+<view class="class_info" id="{{item.id}}" bindtap="gotoDetail">
+
+<view class="class_name">
+{{item.useUserName}}
+</view>
+
+<view class="class_type">
+
+<view class="descript">
+{{item.subscribeTime}}
+</view>
+
+<view class="class_shopName">
+{{item.subscribeStateName}}
+</view>
+</view>
+
+<view class="class_type">
+
+<view class="descript">
+{{item.seatNo}}
+</view>
+
+<view class="class_shopName">
+{{item.payTypeName}}
+</view>
+</view>
+
+</view>
+</view>

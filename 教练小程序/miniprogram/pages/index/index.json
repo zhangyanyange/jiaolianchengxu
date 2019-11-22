@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "登陆",
+  "usingComponents": {
+    "i-input":"../../dist/input/index",
+    "i-button": "../../dist/button/index"
+  }
+}

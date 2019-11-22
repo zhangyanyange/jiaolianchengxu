@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/course/course",
+    "pages/coursedetail/coursedetail"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#523317",
+    "navigationBarTitleText": "洛馨教练",
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 50
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "全部课程",
+  "usingComponents": {
+      "i-panel": "../../dist/panel/index"
+  }
+}

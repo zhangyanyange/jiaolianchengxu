@@ -1,0 +1,43 @@
+<template name="no-goods">
+  <view class="title-box">
+    购物车空空如也～
+  </view>
+</template>
+
+<template name="cart-goods-list">
+  <view class="list-top">
+    <view class="label">提料</view>
+    <view class="edit-btn" hidden="{{!saveHidden}}" bindtap="editTap">编辑</view>
+    <view class="edit-btn" hidden="{{saveHidden}}" bindtap="saveTap">完成</view>
+  </view>
+  <view class="goodsList">
+    <view class="a-gooods" wx:for="{{list}}" wx:key="{{index}}">
+      <view class="a-goods-conts {{item.active? 'active':''}}" bindtap="selectTap" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.left}}">
+        <view class="goods-info">
+          <view class="text-box">
+            <view class="goods-title">{{item.name}}({{item.spec}}/{{item.version}}/{{item.brand}})</view>
+            <view class="goods-label">{{item.label}}</view>
+            <view class="goods-price">¥ {{item.unitPrice}}</view>
+            <view class="buy-num">
+              <text id='{{item.resourceID}}' style='font-size:16px; padding:4px' catchtap='changeCount'>x{{item.quantity}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="delete-btn" data-index="{{index}}" catchtap="delItem">
+          删除
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="jiesuan-box">
+    <view class="left-price">
+      <view class="all-selected  {{allSelect?'active':''}}" bindtap="bindAllSelect">全选</view>
+      <view class="total" hidden="{{noSelect}}">合计：¥ {{totalPrice}}</view>
+    </view>
+    <picker mode="date" value="{{date}}" start="{{date}}" end="2020-09-01" bindchange="toPayOrder" disabled='{{noSelect}}'>
+      <view class="to-pay-btn {{noSelect?'no-select':''}}" hidden="{{!saveHidden}}">提交订单</view>
+    </picker>
+    <view class="to-pay-btn {{noSelect?'no-select':''}}" hidden="{{saveHidden}}" bindtap="deleteSelected">删除</view>
+  </view>
+
+</template>

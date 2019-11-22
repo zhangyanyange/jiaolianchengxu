@@ -1,0 +1,39 @@
+<view wx:for="{{all_courses}}" :key="1">
+<i-panel title="{{item.date}}">
+  <!-- 课程 -->
+  <view class="class_descript"  style="background-color:'#523317'" wx:for="{{item.list}}">
+    <!-- <i-avatar src="{{item.coachUrl}}" size="large" shape="circle" class="avatar_style" style="margin-left:16px"></i-avatar> -->
+    <!-- 课程介绍 -->
+    <view class="class_info" id="{{item.id}}" bindtap="gotoDetail">
+
+      <view class="name_shopname">
+        <view class="class_name">
+          {{item.courseName}}
+        </view>
+
+        <view class="class_shopName">
+          {{item.shopName}}
+        </view>
+
+      </view>
+
+      <view class="class_type">
+
+        <view class="descript">
+         {{item.description}}
+        </view>
+
+        <view class="class_name">
+          {{item.classroomName}}
+        </view>
+
+      </view>
+
+      <view class="class_name">
+        {{item.startSchooltime}}---{{item.endSchooltime}}
+      </view>
+    </view>
+  </view>
+</i-panel>
+
+</view>

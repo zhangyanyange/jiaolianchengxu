@@ -1,0 +1,10 @@
+<view class="login">
+  <image src="../../images/pinpai_logo.png" class="logo_size"></image>
+   <i-input value="{{ phoneNumber }}" type="number" title="联系电话" placeholder="请输入手机号" class="phone_style"  maxlength="11" bind:change="phoneChange"/>
+  <view class="button_input">
+   <i-input value="{{ phoneNumber }}" type="number" title="验证码" placeholder="请输入验证码" class="yzm_style"  maxlength="6" bind:change="codeChange"/>
+   <view class="yzm_button" bindtap="clickGetCode" >{{codeTest}}</view>
+  </view>
+
+  <view bindtap="login" type="self" class="login_button">登录</view>
+</view>
