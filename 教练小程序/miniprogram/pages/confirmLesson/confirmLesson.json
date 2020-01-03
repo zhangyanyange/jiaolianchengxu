@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "私教详情",
+  "usingComponents": {
+      "i-avatar": "../../dist/avatar/index"
+  }
+}

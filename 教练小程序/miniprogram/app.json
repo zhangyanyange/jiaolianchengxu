@@ -2,14 +2,19 @@
   "pages": [
     "pages/index/index",
     "pages/course/course",
-    "pages/coursedetail/coursedetail"
+    "pages/coursedetail/coursedetail",
+    "pages/myappointment/myappointment",
+    "pages/home/home",
+    "pages/courseSchedule/courseSchedule",
+    "pages/privateLesson/privateLesson",
+    "pages/confirmLesson/confirmLesson"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#523317",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "洛馨教练",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "onReachBottomDistance": 50
   },
   "sitemapLocation": "sitemap.json",

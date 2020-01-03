@@ -15,11 +15,9 @@
                   
                 </block>
                 <block wx:else>
-                 <scroll-view scroll-y style="height:{{height}}">
                     <view class="i-modal-action-vertical" wx:for="{{ actions }}" wx:key="{{ item.name }}">
                         <template is="button" data="{{ item, index }}"></template>
-                    </view> 
-                  </scroll-view>       
+                    </view>     
                 </block>   
             </view>
         <view class="i-modal-actions" wx:else>

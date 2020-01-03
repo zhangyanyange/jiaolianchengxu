@@ -17,50 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let openid = wx.getStorageSync('openid');
-    this.data.pageIndex = 1;
-    let that = this;
-    wx.showLoading({
-      title: '加载中...',
-    })
-    wx.request({
-      url: `${app.globalData.baseUrl}api/user/coach/get-token`,
-      method: "GET",
-      data: {
-        openId: openid
-      },
-      success(res) {
-        if (res.data.code === "200") {
-          wx.setStorageSync('token', res.data.data);
-          that.data.token=res.data.data;
-          that.getList();
-        }else if(res.data.code==="502"){
-          wx.hideLoading();
-          wx.showToast({
-            title: res.data.message,
-            icon:"none"
-          })
-          wx.setStorageSync('isLogin', false);
-          wx.redirectTo({
-            url: '../index/index',
-          })
-
-        }else{
-          wx.hideLoading();
-          wx.showToast({
-            title: res.data.message,
-            icon: "none"
-          })
-        }
-      },
-      fail(error) {
-        wx.hideLoading();
-        wx.showToast({
-          title: JSON.stringify(error),
-          icon:"none"
-        })
-      }
-    })
+  
   },
   /**
    * 页面上拉触底事件的处理函数
@@ -80,7 +37,7 @@ Page({
   getList(){
     let that=this;
     wx.request({
-      url: `${app.globalData.baseUrl}api/curriculum-plan/coach/get-list`,
+      url: `${app.globalData.baseUrl}api/curriculum-plan/coach/get-seatReserve-list`,
       method: "GET",
       header: {
         Authorization: `Bearer ${that.data.token}`
@@ -121,9 +78,18 @@ Page({
   },
   //去course详情
   gotoDetail(event){
-
+    let courses=[];
+    for (let item of this.data.all_courses){
+          for(let item1 of item.list){
+              item1.date=item.date
+              courses.push(item1);
+          }
+    }
+    let course=courses.find(item=>{
+      return item.id==event.currentTarget.id;
+    })
     wx.navigateTo({
-      url: `../coursedetail/coursedetail?id=${event.currentTarget.id}`
+      url: `../coursedetail/coursedetail?id=${event.currentTarget.id}&course=${JSON.stringify(course)}`
     })
   }
 })

@@ -9,8 +9,8 @@ import initCalendar, {
   whenSingleSelect,
   getCalendarDates
 } from './main.js';
-let index=0;
-let max=0;
+let index = 0;
+let max = 0;
 const slide = new Slide();
 const logger = new Logger();
 
@@ -22,6 +22,9 @@ Component({
     calendarConfig: {
       type: Object,
       value: {}
+    },
+    color: {
+      type: String
     }
   },
   data: {
@@ -33,11 +36,11 @@ Component({
     }
   },
   lifetimes: {
-    attached: function() {
+    attached: function () {
       this.initComp();
     }
   },
-  attached: function() {
+  attached: function () {
     this.initComp();
   },
   methods: {
@@ -172,7 +175,7 @@ Component({
         'gesture.startX': startX,
         'gesture.startY': startY
       });
-      
+
     },
     /**
      * 日历滑动中
@@ -202,13 +205,13 @@ Component({
         this.slideLock = false;
       }
       if (slide.isRight(gesture, e.touches[0])) {
-        if(index<=0){
+        if (index <= 0) {
           return;
         }
         this.setData({
           'calendar.rightSwipe': 1
         });
-    
+
         if (this.weekMode) {
           this.slideLock = false;
           this.currentDates = getCalendarDates();
@@ -224,16 +227,16 @@ Component({
       }
     },
     calendarTouchend(e) {
-    
+
       this.setData({
         'calendar.leftSwipe': 0,
         'calendar.rightSwipe': 0
       });
     },
     onSwipeCalendar(direction) {
-      if(direction==='next_week'){
+      if (direction === 'next_week') {
         index++;
-      }else{
+      } else {
         index--;
       }
       this.triggerEvent('onSwipe', {

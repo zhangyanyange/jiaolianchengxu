@@ -1,0 +1,111 @@
+
+<view class="createInfo">
+  <image src="../../images/04.jpg" class="info_bg" mode="widthFix"/>
+  <i-avatar src="{{course.coachIcon}}" size="max" shape="circle" class="avatar_style"></i-avatar>
+  <view class="fillInfo">
+    <view class="name">{{course.coachName}}导师</view>
+
+    <view class="course_info" style="margin-top:60rpx;">
+    <view class="course_name">
+      课程名称
+    </view>
+    <view class="course_content">
+      {{course.courseName}}
+    </view>
+  </view>
+
+  <view class="course_info">
+    <view class="course_name">
+      课程价钱
+    </view>
+    <view class="course_content">
+      ￥{{course.price}}
+    </view>
+  </view>
+
+  <view class="course_info">
+    <view class="course_name">
+      预约人数
+    </view>
+    <view class="course_content">
+      {{course.peopleNumber}}人
+    </view>
+  </view>
+
+  <view class="course_info">
+    <view class="course_name">
+      店址
+    </view>
+    <view class="store_info">
+    <view class="course_store" wx:for="{{location}}" bindtap="locationSelect" id="{{item.id}}" style="margin-left:{{item.width}}">
+      <image src="{{locationID===item.id?'../../images/select.png':'../../images/no_select.png'}}" style="height:20px;width:20px"/>
+      {{item.name}}
+    </view>
+
+    </view>
+  </view>
+
+
+  <view class="course_info">
+    <view class="course_name">
+      预约日期
+    </view>
+    <view class="course_content" bindtap="changeTime">
+      {{currentTime}}
+    </view>
+  </view>
+
+  <view class="course_info" bindtap="showTime">
+    <view class="course_name">
+      预约时间
+    </view>
+    <view class="course_content">
+      {{reservationStartTime}}{{reservationEndTime}}
+    </view>
+  </view>
+  <!-- 获取教室详情 -->
+  <view class="course_info" bindtap="showClassRoom">
+    <view class="course_name">
+      上课教室
+    </view>
+    <view class="course_content">
+      {{classRoomName}}
+    </view>
+  </view>
+  </view>
+</view>
+
+<view class="option_button">
+<view class='cancel-button' bindtap="cancelAppointment"> 
+取消约课
+</view>
+<view class='confirm-button' bindtap="confirmAppointment"> 
+确认约课
+</view>
+</view>
+
+<!-- <i-button bind:click="clickWorkerInfo" type="self"  size="large" class='bottom-button' >取消预课</i-button>
+<i-button bind:click="clickWorkerInfo" type="self"  size="large" class='bottom-button' >确认约课</i-button> -->
+<!-- 遮挡层 -->
+<view class="i-modal-mask {{visible}}"catchtap="close">
+<calendar
+  calendarConfig="{{calendarConfig}}"
+  bind:onTapDay="onTapDay"
+  bind:afterTapDay="afterTapDay"
+  bind:onSwipe="onSwipe"
+  bind:whenChangeWeek="whenChangeWeek"
+  bind:whenChangeMonth="whenChangeMonth"
+  bind:afterCalendarRender="afterCalendarRender"
+  class="i-modal {{visible}}"
+  color="#FFF"
+  catchtap="noclose"
+></calendar>
+</view>
+
+<i-modal title="预约时间" visible="{{showTimes}}" actions="{{ timeType }}" height="170px" action-mode="vertical" bind:click="useTime" bind:close="closeModal">
+</i-modal>
+<i-noslip-modal title="选择教室" visible="{{showRooms}}" actions="{{ classRoomType }}" action-mode="vertical" bind:click="useRoom" bind:close="closeModal">
+
+</i-noslip-modal>
+
+

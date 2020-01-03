@@ -1,0 +1,144 @@
+page{
+  background-color: #fff;
+}
+.header {
+  background-color: rgb(82, 51, 23);
+  height: 260rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.store_info {
+  display: flex;
+}
+
+.course_store {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.option_button{
+  position: fixed;
+  bottom: 40rpx;
+  width: 100%;
+  opacity: 1;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cancel-button{
+  background-color: #f00;
+  color:#fff;
+  height: 90rpx;
+  width:700rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.confirm-button{
+  background: #583719;
+  color:#fff;
+  height: 90rpx;
+  width:700rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.i-modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.i-modal {
+  position: fixed;
+  overflow: auto;
+  height: 70%;
+  z-index: 20;
+  display: flex;
+  outline: 0;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateZ(1px);
+  visibility: visible;
+  opacity: 1;
+  width: 70%;
+}
+.novisible{
+  visibility: hidden;
+  opacity: 0;
+}
+.visible{
+  visibility: visible;
+  opacity: 1;
+}
+
+.createInfo{
+  position: relative;  
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info_bg{
+  width:100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.fillInfo{
+  position: absolute;
+  width: 600rpx;
+  height: 750rpx;
+  top: 170rpx;
+  background: #EEEEEE;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar_style{
+   position: absolute;
+   top: 90rpx;
+   z-index: 100;
+}
+.name {
+  font-size: 28rpx;
+  margin-top: 90rpx;
+  color: #583719;
+  font-weight: 700;
+}
+
+.course_info {
+  display: flex;
+  padding: 20rpx;
+  font-size: 26rpx;
+  color: #583719;
+  border-bottom: 1rpx solid #fff;
+  width: 460rpx;
+}
+
+.course_name {
+  width: 160rpx;
+}

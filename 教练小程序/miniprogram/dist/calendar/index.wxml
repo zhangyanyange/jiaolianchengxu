@@ -1,4 +1,4 @@
-<view class="flex b tb ac" wx:if="{{calendar}}">
+<view class="flex b tb ac" wx:if="{{calendar}}" style="background-color: {{color}}">
   <view class="calendar b tb">
     <!-- 头部操作栏 -->
     <view wx:if="{{!calendarConfig.hideHeadOnWeekMode}}" class="handle {{calendarConfig.theme}}_handle-color fs28 b lr ac pc">

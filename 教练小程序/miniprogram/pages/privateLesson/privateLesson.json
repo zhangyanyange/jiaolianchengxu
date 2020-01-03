@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "私教详情",
+  "usingComponents": {
+    "i-avatar": "../../dist/avatar/index",
+    "i-button": "../../dist/button/index",
+    "calendar": "../../dist/calendar/index",
+    "i-modal": "../../dist/modal/index",
+    "i-noslip-modal":"../../dist/noslip-modal/index"
+  }
+}

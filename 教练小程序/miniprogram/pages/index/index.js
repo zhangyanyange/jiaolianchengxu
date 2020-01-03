@@ -13,7 +13,7 @@ Page({
   onLoad: function() {
     if(wx.getStorageSync('isLogin')){
       wx.redirectTo({
-        url: '../course/course'
+        url: '../home/home'
       })
       return
     }
@@ -53,7 +53,7 @@ Page({
       mask: true
     })
     wx.request({
-      url: 'https://loosentest.microfeel.net/api/user/coach/attestation',
+      url: `${app.globalData.baseUrl}api/user/coach/attestation`,
       method: "POST",
       data: {
         "phoneCode": that.data.phoneNumber,
@@ -70,7 +70,7 @@ Page({
           })
           wx.setStorageSync('isLogin', true);
           wx.redirectTo({
-            url: '../course/course'
+            url: '../home/home'
           })
         } else {
           wx.showToast({

@@ -1,0 +1,65 @@
+<view>
+  <view class="course_description">
+    <view class="descript_item">
+      <view class="tuanke_descript">
+      </view>
+      <view class="course_text">
+        团课
+      </view>
+    </view>
+    <view class="descript_item">
+     <view class="sijiao_descript1">
+      </view>
+      <view class="course_text">
+        私教课待确认
+      </view>
+    </view>
+    <view class="descript_item">
+     <view class="sijiao_descript2">
+      </view>
+      <view class="course_text">
+        私教课已确认
+      </view>
+    </view>
+  </view>
+  <view class="title">
+    <view class="title_descript">
+      <view class="diagonal">
+      <view class="minutes">
+        分钟
+      </view>
+
+       <view class="hour">
+       小时
+      </view>
+      </view>
+    </view>
+    <view class="time">
+    <view class="time_item">
+    15分钟
+    </view>
+
+     <view class="time_item">
+    30分钟
+    </view>
+
+     <view class="time_item">
+    45分钟
+    </view>
+     <view class="time_item">
+    60分钟
+    </view>
+  </view>
+  </view>
+
+  <view class="hour_form" wx:for="{{momentEvent}}"> 
+    <view class="hour_descript">
+      {{item.hour}}
+    </view>
+    <view class="hour_content">
+      <view  wx:for="{{item.timeCourses}}" id="{{item.curriculumPlanId}}" style="width:{{item.width}};background-color:{{item.backgroundcolor}} ;order:{{item.sort}}" class="course_descript" bindtap="courseDetail">
+      {{item.productName}}
+      </view>
+    </view>
+  </view>
+</view>

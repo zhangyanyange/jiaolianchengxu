@@ -387,7 +387,11 @@ class WeekMode extends WxData {
         }
         days = lastWeekDays.concat(temp);
       } else {
-        const week = getDate.dayOfWeek(year, month, day);
+        let week = getDate.dayOfWeek(year, month, day);
+        if (week === 0) {
+          day = day - 6;
+          week = getDate.dayOfWeek(year, month, day);
+        }
         let range = [day - week, day + (6 - week)];
         if (firstDayOfWeekIsMon) {
           range = [day + 1 - week, day + (7 - week)];

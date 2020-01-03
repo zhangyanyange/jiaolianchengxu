@@ -16,7 +16,7 @@ App({
     }
 
     this.globalData = {
-      baseUrl:"https://loosentest.microfeel.net/"
+      baseUrl: "https://loosentest.microfeel.net/"//https://api.loosen.com.cn/
     }
   }
 })

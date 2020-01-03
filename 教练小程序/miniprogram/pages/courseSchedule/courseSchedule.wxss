@@ -1,0 +1,98 @@
+.course_description{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 90rpx;
+}
+.descript_item{
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tuanke_descript{
+  background-color: #F8992D;
+  height: 40rpx;
+  width: 90rpx;
+}
+.course_text{
+  color:#333;
+  font-size: 24rpx;
+  margin-left: 6rpx;
+}
+.sijiao_descript1{
+  background-color: #E94925;
+  height: 40rpx;
+  width: 90rpx;
+}
+.sijiao_descript2{
+  background-color: #52B8F8;
+  height: 40rpx;
+  width: 90rpx;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+   border-bottom: 2rpx solid #DAA97E;
+   border-top:2rpx solid #DAA97E;
+}
+.title_descript{
+  width: 110rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.diagonal{
+  width: 0;
+  height: 0;
+  border-top: 100rpx  solid #ffffff;
+  border-left: 110rpx solid #FFA500;
+  position:relative;
+}
+.time{
+  display: flex;
+  flex-direction: row;
+  flex-grow:1;
+  line-height: 100rpx;
+  color: #DAA97E;
+ 
+}
+.time_item{
+  width: 25%;
+  text-align: center;
+  border-left: 2rpx solid #DAA97E;
+} 
+.hour_form{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+}
+.minutes{
+display:block;position:absolute;top:-58px;left:-29px;width:35px;color: #DAA97E;font-size: 20rpx;
+}
+.hour{
+  display:block;position:absolute;top:-45px;left:-55px;width:55x;color: #523317;font-size: 20rpx;
+}
+.hour_descript{
+  width: 110rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-right: 1rpx solid #DAA97E;
+  color: #523317;
+  background-color:#FFA500;
+}
+.hour_content{
+  display: flex;
+  flex-direction: row;
+  flex-grow:1;
+  line-height: 100rpx;
+  color: #DAA97E;
+  border-bottom: 2rpx solid #DAA97E;
+}
+.course_descript{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color:#fff;
+  font-size: 24rpx;
+}

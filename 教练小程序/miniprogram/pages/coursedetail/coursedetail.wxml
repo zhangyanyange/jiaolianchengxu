@@ -1,6 +1,42 @@
-<view class="class_descript"  wx:for="{{course_detail}}">
+ <!-- 课程 -->
+  <view class="class_descript1">
+    <!-- <i-avatar src="{{item.coachUrl}}" size="large" shape="circle" class="avatar_style" style="margin-left:16px"></i-avatar> -->
+    <!-- 课程介绍 -->
+    <view class="class_info" id="{{item.id}}">
 
-<view class="class_info" id="{{item.id}}" bindtap="gotoDetail">
+      <view class="name_shopname">
+        <view class="class_name">
+          {{classroomName}}
+        </view>
+
+        <view class="class_shopName">
+         {{item.date}}
+        </view>
+
+      </view>
+
+      <view class="class_type">
+
+        <view class="descript">  
+            {{item.productName}}
+        </view>
+
+        <view class="class_shopName">
+            {{item.startSchooltime}}---{{item.endSchooltime}}
+        </view>
+
+      </view>
+
+      <view class="class_name">
+          {{item.shopName}}
+      </view>
+    </view>
+  </view>
+
+<view  class="margin-top" wx:if="{{course_detail.length>0}}">
+<view class="class_descript" wx:for="{{course_detail}}">
+
+<view class="class_info"  style="background-color:'#523317'" id="{{item.id}}" bindtap="gotoDetail">
 
 <view class="class_name">
 {{item.useUserName}}
@@ -29,4 +65,8 @@
 </view>
 
 </view>
+</view>
+</view>
+<view wx:if="{{course_detail.length==0}}" class="none_yuyue">
+    无人预约这堂课！
 </view>

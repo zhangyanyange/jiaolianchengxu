@@ -1,0 +1,83 @@
+
+<view class="createInfo">
+  <image src="../../images/04.jpg" class="info_bg" mode="widthFix"/>
+  <i-avatar src="{{course.coachIcon}}" size="max" shape="circle" class="avatar_style"></i-avatar>
+  <view class="fillInfo">
+    <view class="name">{{course.coachName}}导师</view>
+
+    <view class="course_info" style="margin-top:60rpx;">
+    <view class="course_name">
+      课程名称
+    </view>
+    <view class="course_content">
+      {{course.courseName}}
+    </view>
+  </view>
+
+  <view class="course_info">
+    <view class="course_name">
+      课程价钱
+    </view>
+    <view class="course_content">
+      ￥{{course.price}}
+    </view>
+  </view>
+
+  <view class="course_info">
+    <view class="course_name">
+      预约人数
+    </view>
+    <view class="course_content">
+      {{course.peopleNumber}}人
+    </view>
+  </view>
+
+  <view class="course_info">
+    <view class="course_name">
+      店址
+    </view>
+
+    <view class="course_content">
+      {{course.shopName}}
+    </view>
+
+  </view>
+
+
+  <view class="course_info">
+    <view class="course_name">
+      预约日期
+    </view>
+    <view class="course_content">
+      {{currentTime}}
+    </view>
+  </view>
+
+  <view class="course_info">
+    <view class="course_name">
+      预约时间
+    </view>
+    <view class="course_content">
+      {{reservationStartTime}}{{reservationEndTime}}
+    </view>
+  </view>
+  <!-- 获取教室详情 -->
+  <view class="course_info">
+    <view class="course_name">
+      上课教室
+    </view>
+    <view class="course_content">
+      {{classRoomName}}
+    </view>
+  </view>
+  </view>
+</view>
+
+<view class="option_button">
+<view class='cancel-button' bindtap="cancelAppointment"> 
+取消约课
+</view>
+</view>
+
+
+

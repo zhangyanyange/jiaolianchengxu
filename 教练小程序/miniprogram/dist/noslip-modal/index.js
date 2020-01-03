@@ -35,11 +35,7 @@ Component({
         actionMode: {
             type: String,
             value: 'horizontal'
-        },
-        height:{
-        type:String,
-        value:"100%"
-      }
+        }
     },
 
     methods: {
